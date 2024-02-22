@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <form id="calc">
+        <header class="calc_header">
+          <input type="text" disabled id=output class="output" value="0"/>
+        </header>
+        <footer class="calc_footer">
+          <div class="btn_group">
+            <input type="button" value="AC" class="btn btn-clear" onclick="clearOutput()">
+            <input type="button" value="+/-" class="btn btn-negative" onclick="invertSign()">
+            <input type="button" value="%" class="btn btn-percentage" onclick="updateOutput('/')">
+            <input type="button" value="/" class="btn btn-sign" onclick="updateOutput('/100')">
+          </div>
+          <div class="btn_group">
+            <input type="button" value="7" class="btn btn-number" onclick="updateOutput('7')">
+            <input type="button" value="8" class="btn btn-number" onclick="updateOutput('8')">
+            <input type="button" value="9" class="btn btn-number" onclick="updateOutput('9')">
+            <input type="button" value="x" class="btn btn-number" onclick="updateOutput('*')">
+          </div>
+          <div class="btn_group">
+            <input type="button" value="4" class="btn btn-number" onclick="updateOutput('4')">           
+            <input type="button" value="5" class="btn btn-number" onclick="updateOutput('5')">
+            <input type="button" value="6" class="btn btn-number" onclick="updateOutput('6')">
+            <input type="button" value="-" class="btn btn-number" onclick="updateOutput('-')">
+          </div>
+          <div class="btn_group">
+            <input type="button" value="1" class="btn btn-number" onclick="updateOutput('1')">
+            <input type="button" value="2" class="btn btn-number" onclick="updateOutput('2')">
+            <input type="button" value="3" class="btn btn-number" onclick="updateOutput('3')">
+            <input type="button" value="+" class="btn btn-number" onclick="updateOutput('+')">
+          </div>
+          <div class="btn_group">
+            <input type="button" value="0" class="btn btn-zero" onclick="updateOutput('0')">
+
+            <input type="button" value="." class="btn btn-dot" onclick="updateOutput('.')">
+            <input type="button" value="=" class="btn btn-equals" onclick="calc.output.value = eval(calc.output.value) ">
+         </div>
+        </footer>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
